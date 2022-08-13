@@ -1,0 +1,61 @@
+﻿@using BankApp.WebAdminPanel.Models.Exchange
+@model ExchangeModel
+
+<div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <!-- Modal content -->
+    <div class="modal-content" id="editDebtModelBody">
+        <div style="overflow:auto;" class="modal-body">
+            <form asp-controller="Bank" asp-action="Save" class="form-group">
+                <input hidden asp-for="Id"/>
+
+               <div class="form-group">
+                    <label for="name" class="mr-sm-2">Client:</label>
+                    <input asp-for="Client" class="form-control mb-2 mr-sm-2" />
+                    <span asp-validation-for="Client" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="name" class="mr-sm-2">Phone:</label>
+                    <input asp-for="Phone" class="form-control mb-2 mr-sm-2" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name" class="mr-sm-2">AmountFromExchange:</label>
+                    <input asp-for="AmountFromExchange" class="form-control mb-2 mr-sm-2" />
+                    <span asp-validation-for="AmountFromExchange" class="text-danger"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name" class="mr-sm-2">AmountToExchange:</label>
+                    <input asp-for="AmountToExchange" class="form-control mb-2 mr-sm-2" />
+                    <span asp-validation-for="AmountToExchange" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="name" class="mr-sm-2">ConvertFromCurrency:</label>
+                    <input asp-for="ConvertFromCurrency" class="form-control mb-2 mr-sm-2" />
+                    <span asp-validation-for="ConvertFromCurrency" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="name" class="mr-sm-2">ConvertToCurrency:</label>
+                    <input asp-for="ConvertToCurrency" class="form-control mb-2 mr-sm-2" />
+                    <span asp-validation-for="ConvertToCurrency" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="name" class="mr-sm-2">Date:</label>
+                    <input asp-for="Date" class="form-control mb-2 mr-sm-2" />
+                    <span asp-validation-for="Date" class="text-danger"></span>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary bgupdate">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<partial name="_ValidationScriptsPartial"/>
